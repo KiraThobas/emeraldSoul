@@ -1,0 +1,487 @@
+/* RESPONZIVNI OBRAZKY */
+img {
+    max-width: 100%;
+    height: auto; /* kvuli starsim prohlizecum */
+    vertical-align: top; /* aby se netvorila mezera navic
+    pod obrazkem 3px v zakl. */
+}
+
+body {
+    background: #788593;
+    font-family: 'EB Garamond', serif;
+}
+
+p {
+    margin: 10px 10px;
+}
+
+h1 {
+    margin: 10px 10px 8px;
+    font-size: 32px;
+}
+
+h2 {
+    font-size: 26px;
+    margin: 20px 10px 8px 10px;
+}
+
+h3 {
+    font-size: 20px;
+    margin: 10px 10px 8px;
+}
+
+/* STYL OBRAZKU V GALERII */
+.img_gal {
+    border: 2px solid #000;
+    margin: 0 3px;
+}
+
+.img_gal:hover {
+    opacity: 0.5;
+}
+
+/* SLIDESHOW */
+.w3-animate-fading {
+    animation: fading 10s infinite
+}
+
+@keyframes fading{
+    0%{opacity:0}
+    50%{opacity:1}
+    85%{opacity:0}
+}
+
+/* SHOVANI H1 V KOMIKSU */
+.dont_show {
+    display: none;
+}
+
+.container {
+    margin: 50px auto 200px;
+    width: 1010px;
+}
+
+/* floatovani  */
+.fl_left {
+    display: block;
+    float: left;
+    margin: 5px 10px;
+}
+
+.fl_right {
+    display: block;
+    float: right;
+    margin: 5px 10px;
+}
+
+/* responzivita obrazku */
+
+.img {
+    width: 100%;
+    height: auto;
+    vertical-align: top;
+}
+
+/* CLEARFIX */
+.clearfix:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/*ANIMOVANI ODKAZU*/
+a, span {
+    -webkit-transition: all 0.3s ease-out; /*chrome,safari*/
+    -o-transition: all 0.3s ease-out; /*opera*/
+    -ms-transition: all 0.3s ease-out; /*ie*/
+    -moz-transition: all 0.3s ease-out; /*mozilla*/
+    transition: all 0.3s ease-out;
+}
+
+/* HEADER */
+.logo {
+    position: relative;
+    text-align: center;
+    display: block;
+}
+
+
+/* NAVIGACE */
+
+
+nav ul {
+    background: #000;
+    height: 38px;
+    padding: 0;
+}
+
+nav ul li {
+    position: relative;
+    float: left;  
+    list-style: none;
+    width: 202px;
+}
+
+nav ul li a {
+    font-family: 'Amatic SC', cursive;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 0 20px;
+    display: block;
+    text-decoration: none;
+    font-size: 30px;
+    line-height: 38px; 
+}
+
+nav ul li a:hover {
+    background: #000;
+    color: #fff;
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+nav ul li ul {
+    position: absolute;
+    display: none;
+    top: 100%;
+    left: 0;
+    z-index: 5000;
+    
+}
+
+nav ul li ul li {
+    background: #000;
+    width: 202px;
+}
+
+nav ul li a:hover {
+    color: #C7E8F4;
+    background:  #138d75;   
+}
+
+.logo:before {
+    position: absolute;
+    top: 66px;
+    left: 258px;
+    content:'';
+    width: 100px;
+    height: 100px;
+    background: url('../images/svit.png') 0 0 no-repeat;
+    display: none;
+}
+
+.logo:hover:before {
+    display: block;
+}
+
+/* prave vybrana polozka menu na cernou */
+.current-menu-item > a 
+, .current-menu-parent > a {
+    background: #138d75;
+    color: #C7E8F4 !important; 
+}
+
+/*SECTION*/
+section {
+    position: relative;
+    background: rgba(255, 255, 255, .7); 
+    /* zapis barvy pomoci rgb a pruhlednost 0-1 */
+    padding: 15px 10px;
+    padding-bottom: 25px;
+    margin: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 18px;
+}
+
+section p {
+    
+}
+
+/* FOOTER */
+footer {
+    padding-top: 20px;
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+/* CLANEK */
+.clanek {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+.clanek:last-of-type {
+    border-bottom: none;
+}
+
+.thumbnail img{
+    margin-right: 20px;
+    margin-left: 10px;
+    float: left;
+    border: 1px solid #138d75;
+    width: 100px;
+}
+
+.thumbnail img:hover {
+    opacity: 0.5;
+}
+
+.clanek_info {
+    float: left;
+    width: 800px;   
+}
+
+.clanek_info h2 {
+    margin: 0 0 10px;
+}
+
+.clanek_info h2 a {
+    text-decoration: none;
+    color: #000;
+}
+
+.clanek_info p {
+    margin: 0;
+}
+
+.clanek span {
+    font-size: 14px;
+    display: block;
+}
+    
+.button {
+    padding: 5px 20px;
+    float: right;
+    background: #000;
+    color: #fff;  
+    text-decoration: none;
+}
+
+.button:hover {
+    background: #138d75;
+}
+
+.sipka a, .odkaz {
+    color: #138d75;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.sipka a:hover, .odkaz:hover {
+    text-decoration: underline;
+}
+
+/* navigace mezi strankami */
+.old, .new {
+    position: absolute;
+    bottom: 0;
+}
+
+.old a, .new a, .tlacitko {
+    background: #138d75;
+    color: #C7E8F4;
+    text-decoration: none;
+    line-height: 20px;
+    padding: 4px 16px;
+    font-size: 20px;
+}
+
+.old a, .new a {
+    display: block;
+}
+
+.old a:hover, .new a:hover, .tlacitko:hover {
+    background: #000;
+    color: #fff;
+}
+
+.old {
+    right: 0;
+}
+
+.new {
+    left: 0;
+}
+
+/* SEZNAM STRAN */
+.seznam h2 {
+    float: left;
+    margin: 0;
+    margin-bottom: 6px;
+    font-size: 19px;
+}
+
+.seznam h2 a {
+    color: #000;
+    text-decoration: none;
+}
+
+.seznam h2 a:hover {
+    color: #138d75;
+    text-decoration: underline;
+}
+
+.seznam span{
+    margin: 5px 0px 0px 15px;
+    float: left;
+    font-size: 12px;
+}
+
+/* UVODNI STRANKA */
+.uv_obr {
+    width: 450px;
+    margin-left: 5px;
+}
+
+/* STRANKA S KOMIKSEM */
+.comic_page {
+    text-align: center;
+    margin: 10px 0;;
+}
+
+.comic_page p {
+    margin: 0;
+}
+
+/* pokus modal */
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 5000; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 100%;
+    max-width: 2480px;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)}
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 479px){
+    .container { width: 92%;}
+    .slideShow { display: none; }
+    
+    
+    
+}
+
+@media screen and (min-width: 480px){
+    .container { width: 95%;}
+    .slideShow { display: none; }
+    section { margin-top: 60px; }
+}
+
+@media screen and (min-width: 740px){
+    .container { width: 95%}
+    .nav ul li a { background: #000;}
+    .slideShow { display: block; }
+    
+}
+
+@media screen and (min-width: 960px) {
+    .container { width: 960px;}
+    
+}
+
+@media screen and (min-width: 1015px) {
+    .container { width: 1010px; }
+    section { margin-top: 10px; }
+}
+
+@media screen and (max-width: 1014px) {
+    .nav ul li { display: block;}
+    .nav ul li a { display: block; }
+    section { margin-top: 40px; }
+    
+}
+
+@media screen and (max-width: 960px) {
+    
+}
+
+@media screen and (max-width: 925px){
+    
+}
+
+@media screen and (max-width: 870px){
+    
+}
+
+@media screen and (max-width: 790px){
+    
+}
+
+@media screen and (max-width: 750px){
+    
+}
